@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much is the bill?"
+        android:textSize="25sp"
+        android:id="@+id/how_muchTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.5%"
+        android:textSize="25sp"
+        android:background="#ffff5153"
+        android:id="@+id/cheapButton"
+        android:layout_gravity="center_vertical"
+        android:padding="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="on_cheapButtonClick"/>
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5%"
+        android:textSize="25sp"
+        android:id="@+id/standardButton"
+        android:layout_gravity="center_vertical"
+        android:padding="30dp"
+        android:background="#ffff9634"
+        android:layout_alignTop="@+id/expensiveButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="on_standardButtonClick"/>
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10%"
+        android:textSize="25sp"
+        android:id="@+id/expensiveButton"
+        android:layout_gravity="center_vertical"
+        android:padding="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#ff44ff43"
+        android:onClick="on_expensiveButtonClick"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/billEditText"
+        android:layout_below="@+id/how_muchTextView"
+        android:layout_alignLeft="@+id/standardButton"
+        android:layout_alignStart="@+id/standardButton"
+        android:layout_alignRight="@+id/standardButton"
+        android:layout_alignEnd="@+id/standardButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In total you should pay:"
+        android:textSize="25sp"
+        android:id="@+id/should_payTextView"
+        android:layout_above="@+id/totalTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="€0.00"
+        android:textSize="25sp"
+        android:id="@+id/totalTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="How much do you want to tip?"
+        android:textSize="23sp"
+        android:id="@+id/tipTextView"
+        android:layout_above="@+id/cheapButton"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
