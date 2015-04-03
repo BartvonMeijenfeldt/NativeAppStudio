@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
     String output;
     DecimalFormat outputformat = new DecimalFormat("#.00");
 
-    // Button that adds 2.5% to the bill amount and sets it in totalTextView.
+    // Button that adds 2% to the bill amount and sets it in totalTextView.
     public void on_cheapButtonClick(View view) {
 
         // Check if user wrote a value, if not tell user to put in a amount.
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
             return;
         }
 
-        amount = 1.025 * Double.parseDouble((billEditText.getText().toString()));
+        amount = 1.02 * Double.parseDouble((billEditText.getText().toString()));
 
         // Check if the amount is not too big for a bill, if so tell user his bill is not that big.
         if (amount > java.lang.Math.pow(10, 15)) {
